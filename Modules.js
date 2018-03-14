@@ -27,7 +27,7 @@ with the global scope. In order to build reliable and maintainable applications
 we should avoid defining variables and functions in the global scope, instead
 we need modularity. We need to create small building blocks or modules where
 we define our variables and functions so two variables or two functions with
-the same name don't overwrite another variable or function defined somewhere
+the same name don't overwrite another variable or function defihehned somewhere
 else that is encapsulated inside of that module.
 
 Core of NODE concept called Module
@@ -58,3 +58,32 @@ LOAD A MODULE
 -../ for parent folder
 -./ for same current folder
 -require function returns the object that is exported from this target module
+
+MODULE WRAPPER FUNCTION
+
+-This is a function declaration with a couple of parameters
+-Node does not execute codes directly, what it does is wrap the code inside the
+function below
+
+EXAMPLE
+(function (exports, require, module, __filename, __dirname) {
+//.....
+})
+
+MODULES PARAMETER EXAMPLES:
+
+module.exports = log;
+
+EXPORTS PARAMETER EXAMPLES:
+
+module.exports.log = log;
+
+or you can write
+
+module.log = log;
+
+FILENAME:
+-represents the name of this files
+
+DIRNAME:
+-represents the path

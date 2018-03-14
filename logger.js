@@ -1,4 +1,7 @@
-//create a module for logging messages
+MODULE FOR LOGGING MESSAGES
+
+(function (exports, require, module, __filename, __dirname) {
+
 
 var url = 'http://mylogger.io/log';
 
@@ -7,8 +10,12 @@ function log(message) {
   console.log(message);
 }
 
-// Exporting object from a module with mutiple functions/methods or properties
-// module.exports.log = log;
+EXPORTING
 
- // Exporting a SINGLE function only. Use EXAMPLE below instead
+Exporting an object with more than  one function/method or properties
+module.exports.log = log;
+
+ Exporting a SINGLE function only. Use EXAMPLE below instead of above
 module.exports = log;
+
+})
